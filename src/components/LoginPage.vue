@@ -42,10 +42,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const email = ref('');
-const password = ref('');
+const email = ref<string>('');
+const password = ref<string>('');
 
-function handleLogin() {
+function handleLogin(): void {
   console.log('Logging in:', email.value);
   // Add actual login logic later
 }

@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<script lang=ts setup>
+<script setup lang="ts">
 // import NavBar from './NavBar.vue'
 import ServiceCard from './ServiceCard.vue';
 </script>

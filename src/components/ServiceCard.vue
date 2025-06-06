@@ -13,10 +13,12 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-defineProps({
-  name: String,
-  description: String
-});
+interface Props {
+  name: string
+  description: string
+}
+
+defineProps<Props>()
 
 const clicked = ref(false);
 const card = ref<HTMLElement | null>(null)

@@ -8,8 +8,16 @@
       </p>
 
       <div class="grid md:grid-cols-3 gap-12 max-w-2xl mx-auto animate-slide-up">
-        <ServiceCard name="Food Panda" description="Popular for quick bites and local cravings." />
-        <ServiceCard name="Uber Eats" description="Wide variety, seamless tracking, and top-notch service." />
+        <ServiceCard
+          name="Food Panda"
+          description="Popular for quick bites and local cravings."
+          @select="authorizeFoodPanda"
+        />
+        <ServiceCard
+          name="Uber Eats"
+          description="Wide variety, seamless tracking, and top-notch service."
+          @select="authorizeUber"
+        />
         <ServiceCard name="Add More..." description="Customize this to add other services later." />
       </div>
     </main>
@@ -19,6 +27,19 @@
 <script lang=ts setup>
 // import NavBar from './NavBar.vue'
 import ServiceCard from './ServiceCard.vue';
+import { getUberAuthUrl } from '../services/uberAuth';
+import { getFoodPandaAuthUrl } from '../services/foodPandaAuth';
+
+function authorizeUber() {
+  window.location.href = getUberAuthUrl();
+}
+
+function authorizeFoodPanda() {
+  const url = getFoodPandaAuthUrl();
+  if (url) {
+    window.location.href = url;
+  }
+}
 </script>
 
 <style scoped>

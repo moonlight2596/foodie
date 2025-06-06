@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, defineEmits } from 'vue';
 
 defineProps({
   name: String,
@@ -20,10 +20,12 @@ defineProps({
 
 const clicked = ref(false);
 const card = ref<HTMLElement | null>(null)
+const emit = defineEmits(['select'])
 
 function handleClick(event: MouseEvent) {
   createRipple(event);
   clicked.value = true;
+  emit('select');
 
   // Reset font color after 300ms
   setTimeout(() => {

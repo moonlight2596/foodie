@@ -62,3 +62,52 @@ npm run test:e2e -- --debug
 ```sh
 npm run lint
 ```
+
+## Information
+
+Title: Initial Setup - FoodDrop Food Delivery Application
+
+Description:
+This PR establishes the foundational structure for the FoodDrop food delivery application using Vue 3, TypeScript, and Tailwind CSS. The initial setup includes:
+
+Core Features:
+- Homepage with animated landing content
+- Service card components with ripple effect on click
+- Basic routing setup with Home and Login pages
+- Navigation bar with responsive design
+
+Technical Implementation:
+1. Vue 3 Setup:
+   - TypeScript integration
+   - Vue Router configuration
+   - Component architecture established
+
+2. UI/UX:
+   - Responsive design using Tailwind CSS
+   - Custom animations for fade and slide effects
+   - Dark theme with gradient background
+   - Interactive service cards with hover effects
+
+3. Component Structure:
+   - HomePage.vue: Main landing page
+   - NavBar.vue: Navigation component
+   - ServiceCard.vue: Reusable card component
+   - LoginPage.vue: Authentication page (placeholder)
+
+4. Styling:
+   - Tailwind CSS for utility-first styling
+   - Custom animations defined in scoped styles
+   - Consistent dark theme with brand colors
+
+Next Steps:
+- Implement authentication flow
+- Add actual service integration
+- Expand routing for additional pages
+- Add state management
+- Implement actual service card functionality
+
+Testing:
+- Basic e2e test setup with Playwright
+- Component test setup with Vitest
+
+This PR serves as the foundation for future feature implementations and establishes the core architectural patterns we'll follow throughout the project.
